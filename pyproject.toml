@@ -1,0 +1,39 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "introduction_langgraph"
+version = "0.1.0"
+description = "Foundation: Introduction to LangGraph"
+readme = "README.md"
+requires-python = ">=3.14"
+license = { text = "MIT" }
+
+authors = [
+    { name = "Felipe", email = "felipediasd@gmail.com" }
+]
+
+dependencies = [
+    "colorama==0.4.6",
+    "debugpy==1.8.22",
+    "langgraph==1.2.11",
+    "langgraph-cli[inmem]==0.4.31",
+    "langchain-google-genai==4.4.0",
+    "langsmith==0.13.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/felipedds/introduction_langgraph"
+Repository = "https://github.com/felipedds/introduction_langgraph"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.ruff]
